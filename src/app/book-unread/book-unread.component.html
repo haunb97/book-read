@@ -1,0 +1,11 @@
+<a routerLink="/books">Về trang chủ</a>
+<table class="table" border="1px">
+  <thead>
+  <h4>Danh sách đọc</h4>
+  </thead>
+  <tr *ngFor="let book of bookList">
+    <td *ngIf="!book.read">{{ book.name }}</td>
+    <td *ngIf="!book.read"><button (click)="book.read = !book.read">{{ book.read ? 'Đã đọc' : 'Đọc lại'}}</button></td>
+  </tr>
+</table>
+<a routerLink="/books/read">Danh sách đọc</a>
